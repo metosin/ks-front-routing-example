@@ -9,7 +9,7 @@
 ;; Routes:
 ;;
 
-(defapi routes
+(defapi api-routes
   (GET* "/" []
     (-> "index.html"
         (io/resource)
@@ -17,7 +17,7 @@
         (ok)
         (resp/content-type "text/html; charset=\"UTF-8\""))))
 
-(def handler (-> #'routes
+(def handler (-> #'api-routes
                  (wrap-defaults (assoc-in site-defaults [:security :anti-forgery] false))))
 
 ;;

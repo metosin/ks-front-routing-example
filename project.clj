@@ -42,7 +42,7 @@
          :source-map   true}
 
   :cljsbuild {:builds {:dev {:source-paths ["src/clj"]
-                             :figwheel     {:on-jsload "ks-front-routing.ui.main/init!"}
+                             :figwheel     true
                              :compiler     {:main                 ks-front-routing.ui.main
                                             :asset-path           "js/out"
                                             :output-to            "target/dev/public/js/app.js"
